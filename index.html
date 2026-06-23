@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aurora Imóveis em Campo Novo - MG. Encontre casas, terrenos, chácaras e fazendas. Conectando pessoas nos melhores negócios!">
+  <meta name="keywords" content="imóveis, Campo Novo, comprar casa, alugar, imobiliária, fazenda, terreno, Aurora Imóveis">
+  <meta name="author" content="Aurora Imóveis">
+  <title>Aurora Imóveis | Conectando pessoas nos melhores negócios</title>
+
+  
+  <!-- Google Fonts: Outfit for headings, Inter for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="main-header">
+    <div class="nav-container">
+      <a href="#" class="logo-brand">
+        <!-- Modern SVG logo combining real estate outline and premium text -->
+        <svg width="45" height="40" viewBox="0 0 45 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+          <path d="M7 23L22.5 7.5L38 23" stroke="var(--gold-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 18V32C12 33.1046 12.8954 34 14 34H31C32.1046 34 33 33.1046 33 32V18" stroke="white" stroke-width="2.5" stroke-linejoin="round"/>
+          <rect x="20" y="24" width="6" height="10" fill="var(--gold-color)" rx="1"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-title">AURORA</span>
+          <span class="logo-subtitle">IMÓVEIS</span>
+
+        </div>
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#" class="nav-link active">Início</a>
+        <a href="#properties-section" class="nav-link">Imóveis</a>
+        <a href="#about-section" class="nav-link">Quem Somos</a>
+        <a href="#finder-section" class="nav-link">Buscamos para Você</a>
+        <a href="#footer-section" class="nav-link nav-btn-contact">Contato</a>
+      </nav>
+      
+      <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Scroll Section (Scroll-driven video) -->
+  <div class="hero-scroll-wrapper" id="hero-trigger">
+    <div class="hero-sticky-container">
+      <!-- Video Element, optimized with intraframe re-encoding -->
+      <video id="hero-video" src="assets/hero_video.mp4" muted playsinline preload="auto"></video>
+      <div class="hero-overlay"></div>
+      
+      <!-- Scrolling Interactive Text Overlays -->
+      <div class="hero-content-slider">
+        <div class="hero-slide active" id="slide-1">
+          <span class="hero-badge">Campo Novo - MG</span>
+          <h1 class="hero-title">Conectando pessoas nos<br><span class="highlight-gold">melhores negócios!</span></h1>
+          <p class="hero-desc">Role para baixo e veja o futuro do seu próximo imóvel se desdobrar.</p>
+
+          <div class="scroll-indicator">
+            <div class="mouse-icon">
+              <span class="wheel"></span>
+            </div>
+            <span class="scroll-text">Gire o scroll para iniciar</span>
+          </div>
+        </div>
+        
+        <div class="hero-slide" id="slide-2">
+          <h2 class="hero-slide-title">Design Premium & Exclusividade</h2>
+          <p class="hero-slide-desc">Descubra imóveis residenciais, comerciais e rurais selecionados a dedo com a melhor infraestrutura da região.</p>
+        </div>
+        
+        <div class="hero-slide" id="slide-3">
+          <h2 class="hero-slide-title">Invista com Segurança</h2>
+          <p class="hero-slide-desc">Sallami Imobiliária oferece assessoria completa, avaliações precisas e financiamentos facilitados.</p>
+          <a href="#properties-section" class="hero-cta-btn">Explorar Catálogo</a>
+        </div>
+      </div>
+      
+      <!-- Video Progress Bar -->
+      <div class="video-progress-container">
+        <div class="video-progress-bar" id="video-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <!-- Quick Stats Banner -->
+    <section class="stats-banner">
+      <div class="container stats-grid">
+        <div class="stat-card">
+          <span class="stat-number" data-target="30">30+</span>
+          <span class="stat-label">Anos de Experiência</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="500">500+</span>
+          <span class="stat-label">Sonhos Concretizados</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="100">100%</span>
+          <span class="stat-label">Satisfação Garantida</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="15">CRECI RO</span>
+          <span class="stat-label">Credibilidade (4538J)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search & Live Filters Section -->
+    <section class="properties-section" id="properties-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="sub-title">Nossas Oportunidades</span>
+          <h2 class="section-title">Encontre o Imóvel Ideal</h2>
+          <div class="title-decor"></div>
+        </div>
+
+        <!-- Filter Control Panel -->
+        <div class="filter-panel glassmorphism">
+          <div class="search-bar-row">
+            <div class="search-input-wrap">
+              <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" id="search-input" placeholder="Buscar por código, bairro ou palavra-chave (Ex: Ref. 51, Centro)...">
+            </div>
+            
+            <div class="purpose-buttons" id="purpose-filter">
+              <button class="purpose-btn active" data-purpose="todos">Todos</button>
+              <button class="purpose-btn" data-purpose="venda">Comprar</button>
+              <button class="purpose-btn" data-purpose="locacao">Alugar</button>
+            </div>
+          </div>
+
+          <div class="filters-grid">
+            <!-- Categoria Filter -->
+            <div class="filter-group">
+              <label for="category-select">Categoria</label>
+              <select id="category-select" class="custom-select">
+                <option value="todos">Todas as categorias</option>
+                <option value="casa">Casa</option>
+                <option value="terreno">Terreno</option>
+                <option value="terreno-comercial">Terreno Comercial</option>
+                <option value="comercio">Comércio / Ponto Comercial</option>
+                <option value="predio-e-edificio">Prédio e Edifício</option>
+                <option value="area-rural">Área Rural / Fazenda</option>
+                <option value="chacara">Chácara / Sítio</option>
+              </select>
+            </div>
+
+            <!-- Quartos Filter -->
+            <div class="filter-group">
+              <label>Dormitórios</label>
+              <div class="rooms-btn-group" id="rooms-filter">
+                <button class="room-btn active" data-rooms="todos">Qualquer</button>
+                <button class="room-btn" data-rooms="1">1+</button>
+                <button class="room-btn" data-rooms="2">2+</button>
+                <button class="room-btn" data-rooms="3">3+</button>
+                <button class="room-btn" data-rooms="4">4+</button>
+              </div>
+            </div>
+
+            <!-- Preço Máximo Filter -->
+            <div class="filter-group">
+              <label for="price-range">Preço Máximo: <span id="price-value" class="highlight-gold">Qualquer</span></label>
+              <input type="range" id="price-range" min="30000" max="1500000" step="10000" value="1500000">
+              <div class="range-labels">
+                <span>R$ 30 mil</span>
+                <span>R$ 1.5M+</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-summary">
+            <span id="results-count">Mostrando 0 imóveis</span>
+            <button id="clear-filters-btn" class="clear-filters-btn">Limpar Filtros</button>
+          </div>
+        </div>
+
+        <!-- Real-time Properties Grid -->
+        <div class="properties-grid" id="properties-grid">
+          <!-- Populated by JavaScript with transitions -->
+        </div>
+
+        <!-- No Results Template -->
+        <div class="no-results-box" id="no-results" style="display: none;">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          <h3>Nenhum imóvel encontrado</h3>
+          <p>Tente ajustar os filtros ou busque por outro termo.</p>
+          <button class="cta-reset-btn" id="reset-filters-btn">Resetar Filtros</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Finder Section (Nós Buscamos para Você) -->
+    <section class="finder-section" id="finder-section">
+      <div class="finder-bg-overlay"></div>
+      <div class="container finder-container">
+        <div class="w-layout-grid finder-grid">
+          <div class="finder-info-side">
+            <span class="sub-title text-gold">Serviço Exclusivo</span>
+            <h2 class="finder-title text-white">Não encontrou o imóvel ideal?</h2>
+            <p class="finder-desc text-white-opacity">Deixe que nossa equipe altamente qualificada faça o trabalho duro. Nós vasculhamos o mercado de Campo Novo e região para trazer exatamente o que você deseja, poupando seu tempo.</p>
+
+            <div class="finder-bullets">
+              <div class="bullet-item">
+                <span class="bullet-icon"><svg width="16" height="16" fill="var(--gold-color)" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg></span>
+                <span class="bullet-text">Foco em suas necessidades específicas</span>
+              </div>
+              <div class="bullet-item">
+                <span class="bullet-icon"><svg width="16" height="16" fill="var(--gold-color)" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg></span>
+                <span class="bullet-text">Acesso a ofertas fora do catálogo público</span>
+              </div>
+              <div class="bullet-item">
+                <span class="bullet-icon"><svg width="16" height="16" fill="var(--gold-color)" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg></span>
+                <span class="bullet-text">Contato rápido e prático via WhatsApp</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="finder-form-side">
+            <div class="finder-card glassmorphism">
+              <h3>Preencha sua Preferência</h3>
+              <form id="finder-form" class="finder-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="finder-name">Seu Nome</label>
+                    <input type="text" id="finder-name" placeholder="Digite seu nome..." required>
+                  </div>
+                </div>
+                <div class="form-row two-cols">
+                  <div class="form-group">
+                    <label for="finder-purpose">O que deseja?</label>
+                    <select id="finder-purpose">
+                      <option value="Comprar">Comprar</option>
+                      <option value="Alugar">Alugar</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="finder-type">Tipo do Imóvel</label>
+                    <select id="finder-type">
+                      <option value="Casa">Casa</option>
+                      <option value="Terreno">Terreno</option>
+                      <option value="Comercial">Ponto Comercial</option>
+                      <option value="Fazenda/Rural">Rural / Fazenda</option>
+                      <option value="Chácara">Chácara</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row two-cols">
+                  <div class="form-group">
+                    <label for="finder-budget">Orçamento Aproximado</label>
+                    <input type="text" id="finder-budget" placeholder="Ex: Até R$ 400.000">
+                  </div>
+                  <div class="form-group">
+                    <label for="finder-rooms">Mínimo de Quartos</label>
+                    <select id="finder-rooms">
+                      <option value="Não importa">Qualquer</option>
+                      <option value="1 Quarto">1+ Quarto</option>
+                      <option value="2 Quartos">2+ Quartos</option>
+                      <option value="3 Quartos">3+ Quartos</option>
+                      <option value="4+ Quartos">4+ Quartos</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="finder-notes">Mensagem / Bairro Preferido</label>
+                    <textarea id="finder-notes" rows="3" placeholder="Ex: Prefiro no bairro Centro, com quintal grande..."></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="finder-submit-btn">
+                  <span>Buscar Imóvel via WhatsApp</span>
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.977h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.69-4.98c-.202-.1-1.198-.59-1.378-.654-.18-.066-.31-.1-.44.1-.13.19-.5.626-.61.76-.11.124-.22.14-.42.04-.2-.1-.84-.31-1.597-.984-.59-.525-.985-1.175-1.103-1.372-.114-.2-.01-.307.09-.406.09-.09.2-.23.3-.35.1-.117.13-.2.2-.33.07-.13.035-.25-.017-.35-.05-.1-1.198-3.136-1.31-3.4-.117-.282-.237-.243-.3-.243-.06 0-.13-.01-.2-.01-.07 0-.18.03-.27.14-.1.12-.4.4-.4 1.02 0 .61.45 1.2.55 1.34.1.14.89 1.36 2.16 1.91.3.13.54.21.72.27.3.09.57.08.78.05.24-.03.75-.3 1.05-.6.3-.3.3-.56.2-.6-.1-.04-.3-.1-.5-.2z"/></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section" id="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-img-frame">
+              <img src="assets/modern_house.png" alt="Aurora Imóveis" class="about-main-img">
+
+            <div class="badge-experience">
+              <span class="exp-number">30</span>
+              <span class="exp-text">Anos de Histórias e Sucesso</span>
+            </div>
+          </div>
+          
+          <div class="about-content">
+            <span class="sub-title">Nossa História</span>
+            <h2 class="about-title">Sallami Imobiliária e Contrutora</h2>
+            <div class="title-decor left-align"></div>
+            <p class="about-desc">
+              Fundada em Rolim de Moura - Rondônia, a Sallami Imobiliária consolidou-se como referência em ética, solidez e inovação no mercado imobiliário regional. Nosso lema, <strong>"Conectando pessoas nos melhores negócios"</strong>, traduz perfeitamente a nossa missão de transformar sonhos de moradia e investimentos em realidades seguras.
+            </p>
+            <p class="about-desc-secondary">
+              Atuamos fortemente na administração, venda e locação de propriedades urbanas (casas de alto padrão, terrenos residenciais e comerciais) e rurais (chácaras, sítios e fazendas produtivas). Nosso registro profissional <strong>CRECI RO 4538J</strong> atesta o nosso compromisso com as boas práticas legais e financeiras.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1.5 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V9zm2-1A1.5 1.5 0 0 0 2 9.5v3A1.5 1.5 0 0 0 3.5 14h3a1.5 1.5 0 0 0 1.5-1.5v-3A1.5 1.5 0 0 0 6.5 8h-3zm5.5 1.5A1.5 1.5 0 0 1 10.5 8h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 12.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/></svg>
+                </div>
+                <div>
+                  <h4>Amplo Portfólio</h4>
+                  <p>Desde terrenos planos no Planalto até grandes áreas rurais na Zona Rural.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg>
+                </div>
+                <div>
+                  <h4>Avaliação de Confiança</h4>
+                  <p>Perícia técnica especializada para precificar seu imóvel com precisão.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Premium Drawer Property Detail (Slide in from Right) -->
+  <div class="detail-drawer-overlay" id="detail-drawer-overlay">
+    <div class="detail-drawer" id="detail-drawer">
+      <button class="drawer-close-btn" id="drawer-close" aria-label="Fechar Detalhes">&times;</button>
+      
+      <div class="drawer-scroll-container">
+        <!-- Main Image -->
+        <div class="drawer-image-wrapper">
+          <img src="" alt="" id="drawer-img" class="drawer-img">
+          <span class="drawer-purpose-badge" id="drawer-purpose-badge">VENDA</span>
+        </div>
+        
+        <div class="drawer-body">
+          <span class="drawer-ref" id="drawer-ref">Ref. --</span>
+          <h2 class="drawer-title" id="drawer-title">Título do Imóvel</h2>
+          <span class="drawer-address" id="drawer-address">Endereço Completo</span>
+          
+          <div class="drawer-price-box">
+            <span class="price-label">Valor do Imóvel</span>
+            <h3 class="drawer-price" id="drawer-price">R$ --</h3>
+            <span class="drawer-old-price" id="drawer-old-price" style="display: none;">De: R$ --</span>
+          </div>
+          
+          <!-- Characteristics Grid -->
+          <div class="drawer-specs-grid" id="drawer-specs-grid">
+            <!-- Populated dynamically -->
+          </div>
+          
+          <!-- Detailed Description -->
+          <div class="drawer-desc-box">
+            <h4>Descrição do Imóvel</h4>
+            <p id="drawer-description">Detalhes completos sobre as divisões internas, facilidades, e diferenciais.</p>
+          </div>
+
+          <!-- Construction Developer Tag (Contrutora context) -->
+          <div class="contrutora-badge-box">
+            <div class="contrutora-icon">🏗️</div>
+            <div>
+              <h5>Aurora Construtora</h5>
+              <p>Este imóvel conta com o padrão de acabamento e segurança Aurora.</p>
+
+            </div>
+          </div>
+          
+          <!-- Contact Box -->
+          <div class="drawer-contact-card">
+            <h4>Ficou Interessado?</h4>
+            <p>Fale diretamente com o corretor responsável por este imóvel e tire todas as suas dúvidas via WhatsApp.</p>
+            <a href="#" target="_blank" class="whatsapp-contact-btn" id="drawer-whatsapp-btn">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.977h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.69-4.98c-.202-.1-1.198-.59-1.378-.654-.18-.066-.31-.1-.44.1-.13.19-.5.626-.61.76-.11.124-.22.14-.42.04-.2-.1-.84-.31-1.597-.984-.59-.525-.985-1.175-1.103-1.372-.114-.2-.01-.307.09-.406.09-.09.2-.23.3-.35.1-.117.13-.2.2-.33.07-.13.035-.25-.017-.35-.05-.1-1.198-3.136-1.31-3.4-.117-.282-.237-.243-.3-.243-.06 0-.13-.01-.2-.01-.07 0-.18.03-.27.14-.1.12-.4.4-.4 1.02 0 .61.45 1.2.55 1.34.1.14.89 1.36 2.16 1.91.3.13.54.21.72.27.3.09.57.08.78.05.24-.03.75-.3 1.05-.6.3-.3.3-.56.2-.6-.1-.04-.3-.1-.5-.2z"/></svg>
+              <span>Conversar via WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="global-footer" id="footer-section">
+    <div class="container footer-grid">
+      <div class="footer-col branding-col">
+        <a href="#" class="footer-logo">
+
+          <svg width="35" height="30" viewBox="0 0 45 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 23L22.5 7.5L38 23" stroke="var(--gold-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 18V32C12 33.1046 12.8954 34 14 34H31C32.1046 34 33 33.1046 33 32V18" stroke="white" stroke-width="2.5" stroke-linejoin="round"/>
+          </svg>
+          <div class="logo-text">
+            <span class="logo-title">AURORA</span>
+            <span class="logo-subtitle">IMÓVEIS</span>
+
+          </div>
+        </a>
+        <p class="footer-about">Conectando pessoas nos melhores negócios em Campo Novo e região. CRECI MG. (Exemplo).</p>
+
+        <div class="social-links">
+          <a href="https://www.instagram.com/sallamiimobiliaria" target="_blank" aria-label="Instagram" class="social-icon">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.999 0h.002zm-.008 1.44c2.158 0 2.414.008 3.265.047.781.036 1.205.166 1.488.276.374.145.64.318.92.598.28.28.453.546.598.92.11.281.24.705.275 1.485.039.847.047 1.102.047 3.264 0 2.162-.008 2.417-.047 3.264-.036.78-.166 1.205-.276 1.488-.145.374-.319.64-.599.92-.28.28-.546.453-.92.598-.282.11-.705.24-1.485.276-.847.039-1.102.047-3.264.047-2.162 0-2.417-.008-3.264-.047-.78-.036-1.205-.166-1.488-.276a2.473 2.473 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.847-.046-1.102-.046-3.264 0-2.162.008-2.417.046-3.264.035-.78.166-1.205.276-1.488.145-.374.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.838-.039 1.11-.047 3.263-.047h.002zm0 3.278a4.735 4.735 0 1 0 0 9.47 4.735 4.735 0 0 0 0-9.47zm0 7.88a3.146 3.146 0 1 1 0-6.292 3.146 3.146 0 0 1 0 6.292zm4.009-7.882a.96.96 0 1 0 0-1.92.96.96 0 0 0 0 1.92z"/></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Links Úteis</h4>
+        <ul class="footer-links">
+          <li><a href="#">Início</a></li>
+          <li><a href="#properties-section">Buscar Imóveis</a></li>
+          <li><a href="#about-section">Quem Somos</a></li>
+          <li><a href="#finder-section">Encontrar meu Imóvel</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tipos de Imóvel</h4>
+        <ul class="footer-links">
+          <li><a href="#properties-section" onclick="setCategoryFilter('casa')">Casas Urbanas</a></li>
+          <li><a href="#properties-section" onclick="setCategoryFilter('terreno')">Lotes e Terrenos</a></li>
+          <li><a href="#properties-section" onclick="setCategoryFilter('area-rural')">Fazendas & Sítios</a></li>
+          <li><a href="#properties-section" onclick="setCategoryFilter('comercio')">Pontos Comerciais</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col contact-col">
+        <h4>Fale Conosco</h4>
+        <ul class="footer-contact-info">
+          <li>
+            <span class="info-icon">📍</span>
+            <span class="info-text">Av. Central, n° 1234, Sala 7, Centro - Campo Novo, MG</span>
+          </li>
+
+          <li>
+            <span class="info-icon">📞</span>
+            <a href="tel:5531999999999" class="info-text">(31) 9 9999-9999</a>
+
+          </li>
+          <li>
+            <span class="info-icon">💬</span>
+            <a href="https://api.whatsapp.com/send?l=pt_br&phone=5569984866004" target="_blank" class="info-text font-bold text-gold">(69) 9 8486-6004</a>
+          </li>
+          <li>
+            <span class="info-icon">✉️</span>
+            <span class="info-text">sallamiimobiliaria@gmail.com</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 Sallami Imobiliária. CRECI RO 4538J. Todos os direitos reservados.</p>
+        <p class="dev-credits">Parceria Sallami & Si9 Sistemas | Criado com ✦ Antigravity</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Icon -->
+  <a href="https://api.whatsapp.com/send?l=pt_br&phone=5569984866004" class="whatsapp-floating" target="_blank" aria-label="Fale Conosco pelo WhatsApp">
+    <svg width="35" height="35" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.977h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.69-4.98c-.202-.1-1.198-.59-1.378-.654-.18-.066-.31-.1-.44.1-.13.19-.5.626-.61.76-.11.124-.22.14-.42.04-.2-.1-.84-.31-1.597-.984-.59-.525-.985-1.175-1.103-1.372-.114-.2-.01-.307.09-.406.09-.09.2-.23.3-.35.1-.117.13-.2.2-.33.07-.13.035-.25-.017-.35-.05-.1-1.198-3.136-1.31-3.4-.117-.282-.237-.243-.3-.243-.06 0-.13-.01-.2-.01-.07 0-.18.03-.27.14-.1.12-.4.4-.4 1.02 0 .61.45 1.2.55 1.34.1.14.89 1.36 2.16 1.91.3.13.54.21.72.27.3.09.57.08.78.05.24-.03.75-.3 1.05-.6.3-.3.3-.56.2-.6-.1-.04-.3-.1-.5-.2z"/></svg>
+  </a>
+
+  <!-- JavaScript App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
